@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "MetroBugReproduction"
 include(":androidApp")
 include(":shared")
+include(":feature")

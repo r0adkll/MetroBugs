@@ -6,6 +6,11 @@ plugins {
     alias(libs.plugins.metro)
 }
 
+metro {
+    debug.set(true)
+    reportsDestination.set(layout.buildDirectory.dir("metro/reports"))
+}
+
 kotlin {
     androidTarget {
         compilations.all {
@@ -31,14 +36,12 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
+            api(projects.feature)
             implementation(libs.kotlinx.coroutines.core)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
-    }
-    sourceSets.commonMain.dependencies {
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:null")
     }
 }
 
