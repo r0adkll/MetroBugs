@@ -6,6 +6,10 @@ plugins {
   alias(libs.plugins.metro)
 }
 
+metro {
+  transformProvidersToPrivate.set(false)
+}
+
 kotlin {
   androidTarget {
     compilations.all {

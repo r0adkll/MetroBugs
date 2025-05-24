@@ -1,6 +1,7 @@
 package com.example.metrobugreproduction
 
 import com.example.feature.FeatureApi
+import com.example.feature.FeaturePlain
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.DependencyGraph
 import dev.zacsweers.metro.SingleIn
@@ -10,4 +11,5 @@ import dev.zacsweers.metro.SingleIn
 interface IosAppGraph : AppGraph {
 
   val featureApi: FeatureApi
+  val featurePlain: FeaturePlain
 }
